@@ -1,0 +1,1451 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>挠脚心 - 轻松治愈短片社区,记录生活里的温柔瞬间</title>
+<meta name="description" content="挠脚心官方网站，专注轻松治愈类原创短片的内容社区，汇聚真实生活记录、趣味互动与温暖故事，为创作者与观众搭建高品质内容生态。">
+<meta name="keywords" content="挠脚心,挠脚心官网,治愈短片,生活记录,原创视频,内容社区">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23f7b955'/%3E%3Ccircle cx='22' cy='26' r='4' fill='%23fff6e8'/%3E%3Ccircle cx='42' cy='26' r='4' fill='%23fff6e8'/%3E%3Cpath d='M20 42 Q32 52 44 42' stroke='%23fff6e8' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --npx-amber:#f7b955;
+    --npx-amber-deep:#e8931f;
+    --npx-cream:#fff8ec;
+    --npx-cream-2:#fdeed7;
+    --npx-brown:#4a3524;
+    --npx-brown-soft:#7a5f45;
+    --npx-line:#e9d6b8;
+    --npx-card:#ffffff;
+    --npx-shadow:0 10px 30px rgba(160,116,55,.13);
+    --npx-radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;scroll-padding-top:120px;}
+  body{
+    font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+    background:var(--npx-cream);
+    color:var(--npx-brown);
+    line-height:1.75;
+    font-size:16px;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  button{font-family:inherit;cursor:pointer;}
+  .npx-wrap{max-width:1180px;margin:0 auto;padding:0 22px;}
+  .npx-btn{
+    display:inline-flex;align-items:center;gap:8px;justify-content:center;
+    padding:12px 26px;border-radius:999px;border:1px solid transparent;
+    font-size:15px;font-weight:600;transition:.25s;white-space:nowrap;
+  }
+  .npx-btn-primary{background:linear-gradient(135deg,var(--npx-amber),var(--npx-amber-deep));color:#fff;box-shadow:0 8px 20px rgba(232,147,31,.35);}
+  .npx-btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(232,147,31,.45);}
+  .npx-btn-ghost{border-color:var(--npx-amber-deep);color:var(--npx-amber-deep);background:transparent;}
+  .npx-btn-ghost:hover{background:var(--npx-cream-2);}
+  .npx-btn-soft{background:var(--npx-cream-2);color:var(--npx-brown);border-color:var(--npx-line);}
+  .npx-btn-soft:hover{background:#fbe2c0;}
+
+  /* 吸顶区 */
+  .npx-sticky{position:sticky;top:0;z-index:90;}
+  .npx-notice{
+    background:linear-gradient(90deg,#4a3524,#7a5f45);
+    color:#ffe9c6;font-size:13.5px;
+  }
+  .npx-notice .npx-wrap{display:flex;align-items:center;gap:12px;padding-top:8px;padding-bottom:8px;overflow:hidden;}
+  .npx-notice-tag{
+    flex:0 0 auto;background:var(--npx-amber);color:#4a3524;font-weight:700;
+    padding:1px 10px;border-radius:999px;font-size:12px;letter-spacing:.5px;
+  }
+  .npx-notice-track{position:relative;height:22px;overflow:hidden;flex:1;}
+  .npx-notice-item{
+    position:absolute;left:0;top:0;width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+    opacity:0;transform:translateY(100%);transition:.5s;
+  }
+  .npx-notice-item.is-on{opacity:1;transform:translateY(0);}
+
+  .npx-header{background:rgba(255,248,236,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--npx-line);}
+  .npx-header .npx-wrap{display:flex;align-items:center;gap:26px;padding-top:12px;padding-bottom:12px;}
+  .npx-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:21px;letter-spacing:.5px;flex:0 0 auto;}
+  .npx-logo-mark{
+    width:40px;height:40px;border-radius:13px;flex:0 0 auto;
+    background:linear-gradient(140deg,#ffd88a,#e8931f);
+    display:grid;place-items:center;color:#fff;font-size:20px;
+    box-shadow:0 6px 14px rgba(232,147,31,.35);
+  }
+  .npx-logo small{display:block;font-size:10.5px;font-weight:500;color:var(--npx-brown-soft);letter-spacing:2px;}
+  .npx-nav{display:flex;gap:4px;flex:1;}
+  .npx-nav a{
+    padding:8px 13px;border-radius:999px;font-size:14.5px;color:var(--npx-brown-soft);
+    transition:.2s;font-weight:500;
+  }
+  .npx-nav a:hover{background:var(--npx-cream-2);color:var(--npx-brown);}
+  .npx-head-tools{display:flex;align-items:center;gap:10px;flex:0 0 auto;}
+  .npx-search{
+    display:flex;align-items:center;background:#fff;border:1px solid var(--npx-line);
+    border-radius:999px;padding:5px 6px 5px 15px;gap:6px;transition:.2s;
+  }
+  .npx-search:focus-within{border-color:var(--npx-amber-deep);box-shadow:0 0 0 4px rgba(247,185,85,.22);}
+  .npx-search input{border:none;outline:none;background:transparent;font-size:14px;width:132px;color:var(--npx-brown);}
+  .npx-search button{
+    width:30px;height:30px;border-radius:999px;border:none;background:var(--npx-amber);
+    color:#fff;display:grid;place-items:center;font-size:14px;transition:.2s;
+  }
+  .npx-search button:hover{background:var(--npx-amber-deep);}
+  .npx-search-feedback{
+    position:absolute;font-size:12.5px;color:var(--npx-amber-deep);background:#fff;
+    border:1px solid var(--npx-line);padding:2px 10px;border-radius:999px;
+  }
+  .npx-burger{
+    display:none;width:40px;height:40px;border-radius:12px;border:1px solid var(--npx-line);
+    background:#fff;flex-direction:column;justify-content:center;align-items:center;gap:4px;
+  }
+  .npx-burger span{width:18px;height:2px;background:var(--npx-brown);border-radius:2px;transition:.25s;}
+  .npx-burger.is-open span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+  .npx-burger.is-open span:nth-child(2){opacity:0;}
+  .npx-burger.is-open span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+  .npx-mobile-nav{display:none;background:#fff;border-bottom:1px solid var(--npx-line);}
+  .npx-mobile-nav.is-open{display:block;}
+  .npx-mobile-nav a{display:block;padding:12px 22px;border-bottom:1px dashed var(--npx-line);font-size:15px;}
+
+  /* 首屏 */
+  .npx-hero{padding:54px 0 30px;position:relative;overflow:hidden;}
+  .npx-hero::before{
+    content:"";position:absolute;right:-140px;top:-120px;width:420px;height:420px;border-radius:50%;
+    background:radial-gradient(circle,rgba(247,185,85,.34),rgba(247,185,85,0) 68%);
+  }
+  .npx-hero::after{
+    content:"";position:absolute;left:-100px;bottom:-160px;width:340px;height:340px;border-radius:50%;
+    background:radial-gradient(circle,rgba(232,147,31,.16),rgba(232,147,31,0) 70%);
+  }
+  .npx-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;position:relative;z-index:2;}
+  .npx-hero-badge{
+    display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--npx-line);
+    border-radius:999px;padding:5px 15px;font-size:13px;color:var(--npx-amber-deep);font-weight:600;
+    box-shadow:var(--npx-shadow);
+  }
+  .npx-hero-badge i{width:8px;height:8px;border-radius:50%;background:var(--npx-amber-deep);display:inline-block;}
+  .npx-hero h1{
+    font-size:clamp(38px,5.4vw,60px);line-height:1.15;margin:18px 0 6px;letter-spacing:1px;
+    color:var(--npx-brown);font-weight:900;
+  }
+  .npx-hero h1 em{font-style:normal;color:var(--npx-amber-deep);}
+  .npx-hero-sub{font-size:18px;font-weight:600;color:var(--npx-brown-soft);margin-bottom:16px;}
+  .npx-hero-desc{font-size:15px;color:#6d5540;margin-bottom:24px;max-width:560px;}
+  .npx-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px;}
+  .npx-hero-stats{display:flex;gap:14px;flex-wrap:wrap;}
+  .npx-stat{
+    background:#fff;border:1px solid var(--npx-line);border-radius:16px;padding:12px 18px;min-width:118px;
+    box-shadow:var(--npx-shadow);
+  }
+  .npx-stat b{font-size:22px;color:var(--npx-amber-deep);display:block;line-height:1.3;}
+  .npx-stat span{font-size:12.5px;color:var(--npx-brown-soft);}
+  .npx-hero-visual{position:relative;}
+  .npx-hero-visual-main{
+    border-radius:26px;overflow:hidden;box-shadow:0 22px 48px rgba(160,116,55,.28);
+    border:6px solid #fff;transform:rotate(-1.4deg);
+  }
+  .npx-hero-visual-main img{width:100%;height:auto;aspect-ratio:16/11;object-fit:cover;}
+  .npx-hero-float{
+    position:absolute;background:#fff;border-radius:16px;padding:11px 16px;box-shadow:var(--npx-shadow);
+    display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;
+  }
+  .npx-hero-float.one{left:-14px;top:26px;transform:rotate(1.5deg);}
+  .npx-hero-float.two{right:-10px;bottom:34px;transform:rotate(-2deg);}
+  .npx-hero-float .dot{width:30px;height:30px;border-radius:10px;background:var(--npx-cream-2);display:grid;place-items:center;font-size:15px;}
+
+  /* 通用 section */
+  .npx-section{padding:52px 0;}
+  .npx-section-head{margin-bottom:30px;max-width:780px;}
+  .npx-eyebrow{
+    display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:2px;color:var(--npx-amber-deep);
+    background:var(--npx-cream-2);border-radius:999px;padding:3px 13px;margin-bottom:12px;
+  }
+  .npx-section-head h2{font-size:clamp(24px,3.3vw,33px);line-height:1.3;letter-spacing:.5px;}
+  .npx-section-head p{color:var(--npx-brown-soft);font-size:15px;margin-top:10px;}
+
+  /* 焦点 */
+  .npx-focus-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:22px;}
+  .npx-vcard{
+    background:#fff;border:1px solid var(--npx-line);border-radius:var(--npx-radius);overflow:hidden;
+    box-shadow:var(--npx-shadow);transition:.28s;display:flex;flex-direction:column;
+  }
+  .npx-vcard:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(160,116,55,.22);}
+  .npx-cover{position:relative;overflow:hidden;background:var(--npx-cream-2);}
+  .npx-cover img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:.5s;}
+  .npx-vcard:hover .npx-cover img{transform:scale(1.05);}
+  .npx-cover-tag{
+    position:absolute;left:12px;top:12px;background:rgba(74,53,36,.82);color:#ffe9c6;
+    font-size:12px;padding:3px 10px;border-radius:999px;backdrop-filter:blur(4px);
+  }
+  .npx-play{
+    position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;
+  }
+  .npx-play i{
+    width:52px;height:52px;border-radius:50%;background:rgba(255,248,236,.92);
+    display:grid;place-items:center;box-shadow:0 6px 18px rgba(74,53,36,.3);
+    color:var(--npx-amber-deep);font-size:19px;padding-left:3px;
+  }
+  .npx-cover-mask{
+    position:absolute;inset:0;background:linear-gradient(to top,rgba(74,53,36,.55),transparent 55%);
+  }
+  .npx-vcard-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1;}
+  .npx-vcard-body h3{font-size:16.5px;line-height:1.45;}
+  .npx-vcard-body p{font-size:13.5px;color:var(--npx-brown-soft);flex:1;}
+  .npx-tags{display:flex;gap:6px;flex-wrap:wrap;}
+  .npx-tag{
+    font-size:11.5px;background:var(--npx-cream-2);color:var(--npx-amber-deep);
+    padding:2px 9px;border-radius:999px;font-weight:600;
+  }
+  .npx-meta{
+    display:flex;align-items:center;justify-content:space-between;gap:8px;
+    font-size:12.5px;color:#9a7b5c;border-top:1px dashed var(--npx-line);padding-top:11px;margin-top:2px;
+  }
+  .npx-actions{display:flex;gap:14px;}
+  .npx-act{display:inline-flex;align-items:center;gap:4px;background:none;border:none;font-size:12.5px;color:#9a7b5c;transition:.2s;}
+  .npx-act:hover{color:var(--npx-amber-deep);}
+  .npx-act.is-liked{color:#e05a3a;font-weight:700;}
+  .npx-act.is-saved{color:var(--npx-amber-deep);font-weight:700;}
+  .npx-focus-side{display:flex;flex-direction:column;gap:16px;}
+  .npx-focus-side .npx-vcard-body{padding:12px 14px 14px;}
+  .npx-focus-side .npx-vcard-body h3{font-size:14.5px;}
+  .npx-focus-side .npx-vcard-body p{font-size:12.5px;}
+
+  /* 视频流 */
+  .npx-stream-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .npx-filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;}
+  .npx-chip{
+    background:#fff;border:1px solid var(--npx-line);padding:7px 16px;border-radius:999px;
+    font-size:13.5px;color:var(--npx-brown-soft);transition:.2s;font-weight:500;
+  }
+  .npx-chip:hover{border-color:var(--npx-amber-deep);color:var(--npx-amber-deep);}
+  .npx-chip.is-active{background:var(--npx-amber);border-color:var(--npx-amber);color:#fff;font-weight:700;}
+
+  /* 专题 */
+  .npx-topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .npx-topic{
+    border-radius:var(--npx-radius);overflow:hidden;position:relative;min-height:250px;
+    display:flex;align-items:flex-end;color:#fff;box-shadow:var(--npx-shadow);
+  }
+  .npx-topic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .npx-topic-mask{position:absolute;inset:0;background:linear-gradient(to top,rgba(58,40,26,.9),rgba(58,40,26,.15) 65%);}
+  .npx-topic-body{position:relative;padding:20px;z-index:2;}
+  .npx-topic-body h3{font-size:18px;margin-bottom:6px;}
+  .npx-topic-body p{font-size:13px;opacity:.9;margin-bottom:10px;}
+  .npx-topic-state{
+    display:inline-block;font-size:11.5px;background:rgba(247,185,85,.92);color:#4a3524;
+    padding:2px 10px;border-radius:999px;font-weight:700;
+  }
+
+  /* 创作者 */
+  .npx-maker-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .npx-maker{
+    background:#fff;border:1px solid var(--npx-line);border-radius:var(--npx-radius);padding:22px 18px;
+    text-align:center;transition:.28s;box-shadow:var(--npx-shadow);
+  }
+  .npx-maker:hover{transform:translateY(-6px);border-color:var(--npx-amber);}
+  .npx-avatar{
+    width:66px;height:66px;border-radius:50%;margin:0 auto 12px;display:grid;place-items:center;
+    color:#fff;font-weight:800;font-size:22px;box-shadow:0 6px 16px rgba(160,116,55,.28);overflow:hidden;
+  }
+  .npx-avatar svg{width:100%;height:100%;}
+  .npx-maker h3{font-size:16px;margin-bottom:3px;}
+  .npx-maker .npx-maker-field{font-size:12.5px;color:var(--npx-amber-deep);font-weight:600;margin-bottom:8px;}
+  .npx-maker p{font-size:12.5px;color:var(--npx-brown-soft);min-height:56px;}
+  .npx-maker-data{display:flex;justify-content:center;gap:16px;font-size:12px;color:#9a7b5c;margin-top:10px;border-top:1px dashed var(--npx-line);padding-top:10px;}
+  .npx-maker-data b{color:var(--npx-brown);display:block;font-size:14.5px;}
+
+  /* 深度解析 */
+  .npx-about{
+    background:linear-gradient(135deg,#fffdf8,#fdeed7);
+    border-top:1px solid var(--npx-line);border-bottom:1px solid var(--npx-line);
+  }
+  .npx-about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
+  .npx-about h2{font-size:clamp(24px,3.2vw,32px);margin-bottom:16px;}
+  .npx-about p{font-size:14.5px;color:#6d5540;margin-bottom:14px;text-align:justify;}
+  .npx-about-list{display:grid;gap:14px;}
+  .npx-about-item{
+    background:#fff;border:1px solid var(--npx-line);border-radius:16px;padding:16px 18px;
+    display:flex;gap:14px;align-items:flex-start;box-shadow:var(--npx-shadow);
+  }
+  .npx-about-item .ico{
+    flex:0 0 auto;width:40px;height:40px;border-radius:12px;background:var(--npx-cream-2);
+    display:grid;place-items:center;font-size:18px;
+  }
+  .npx-about-item h3{font-size:15px;margin-bottom:3px;}
+  .npx-about-item p{font-size:13px;margin:0;color:var(--npx-brown-soft);text-align:left;}
+  .npx-keywords{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;}
+  .npx-kw{
+    font-size:12.5px;background:#fff;border:1px solid var(--npx-line);border-radius:999px;
+    padding:4px 13px;color:var(--npx-brown-soft);
+  }
+
+  /* 评价 */
+  .npx-review-grid{column-count:3;column-gap:18px;}
+  .npx-review{
+    break-inside:avoid;background:#fff;border:1px solid var(--npx-line);border-radius:16px;
+    padding:18px;margin-bottom:18px;box-shadow:var(--npx-shadow);transition:.25s;
+  }
+  .npx-review:hover{transform:translateY(-3px);border-color:var(--npx-amber);}
+  .npx-review-head{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+  .npx-review-head .npx-avatar{width:38px;height:38px;font-size:14px;margin:0;}
+  .npx-review-head b{font-size:14px;display:block;}
+  .npx-review-head span{font-size:11.5px;color:#a58a6c;}
+  .npx-review p{font-size:13.5px;color:#5f4834;}
+  .npx-stars{color:var(--npx-amber-deep);font-size:12.5px;letter-spacing:2px;margin-top:8px;}
+
+  /* 动态 */
+  .npx-news{display:grid;gap:12px;}
+  .npx-news-item{
+    background:#fff;border:1px solid var(--npx-line);border-radius:14px;padding:15px 18px;
+    display:flex;gap:16px;align-items:center;transition:.22s;
+  }
+  .npx-news-item:hover{border-color:var(--npx-amber);transform:translateX(4px);}
+  .npx-news-date{
+    flex:0 0 auto;font-size:12px;font-weight:700;color:var(--npx-amber-deep);
+    background:var(--npx-cream-2);border-radius:10px;padding:6px 12px;text-align:center;line-height:1.3;
+  }
+  .npx-news-item h3{font-size:14.5px;margin-bottom:2px;}
+  .npx-news-item p{font-size:12.5px;color:var(--npx-brown-soft);}
+
+  /* FAQ */
+  .npx-faq{display:grid;gap:10px;max-width:900px;margin:0 auto;}
+  .npx-faq details{
+    background:#fff;border:1px solid var(--npx-line);border-radius:14px;padding:14px 20px;transition:.2s;
+  }
+  .npx-faq details[open]{border-color:var(--npx-amber);box-shadow:var(--npx-shadow);}
+  .npx-faq summary{
+    cursor:pointer;font-weight:600;font-size:15px;list-style:none;display:flex;
+    justify-content:space-between;align-items:center;gap:12px;
+  }
+  .npx-faq summary::-webkit-details-marker{display:none;}
+  .npx-faq summary::after{content:"+";font-size:20px;color:var(--npx-amber-deep);transition:.2s;}
+  .npx-faq details[open] summary::after{transform:rotate(45deg);}
+  .npx-faq p{font-size:13.5px;color:var(--npx-brown-soft);margin-top:10px;}
+
+  /* 投稿/联系 */
+  .npx-join{
+    background:linear-gradient(120deg,#4a3524,#7a5f45 70%);
+    color:#ffe9c6;border-radius:26px;padding:40px;display:grid;grid-template-columns:1.15fr .85fr;
+    gap:30px;align-items:center;box-shadow:0 20px 44px rgba(74,53,36,.32);position:relative;overflow:hidden;
+  }
+  .npx-join::after{
+    content:"";position:absolute;right:-60px;bottom:-80px;width:240px;height:240px;border-radius:50%;
+    background:radial-gradient(circle,rgba(247,185,85,.4),transparent 70%);
+  }
+  .npx-join h2{font-size:clamp(23px,3vw,30px);margin-bottom:12px;}
+  .npx-join p{font-size:14px;opacity:.88;margin-bottom:20px;}
+  .npx-join-actions{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:2;}
+  .npx-join .npx-btn-soft{background:#ffe9c6;color:#4a3524;border-color:transparent;}
+  .npx-join-form{
+    background:rgba(255,248,236,.1);border:1px solid rgba(255,233,198,.3);border-radius:18px;padding:20px;
+    position:relative;z-index:2;
+  }
+  .npx-join-form label{display:block;font-size:12.5px;margin-bottom:6px;opacity:.9;}
+  .npx-join-form input,.npx-join-form textarea{
+    width:100%;border-radius:10px;border:1px solid rgba(255,233,198,.35);background:rgba(255,248,236,.92);
+    padding:9px 12px;font-size:13.5px;color:#4a3524;margin-bottom:12px;outline:none;font-family:inherit;
+  }
+  .npx-join-form input:focus,.npx-join-form textarea:focus{border-color:var(--npx-amber);}
+  .npx-join-form textarea{resize:vertical;min-height:66px;}
+
+  /* 页脚 */
+  .npx-footer{background:#3a281a;color:#d8c3a6;padding:46px 0 24px;font-size:13.5px;}
+  .npx-footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:32px;margin-bottom:32px;}
+  .npx-footer h4{color:#ffe9c6;font-size:15px;margin-bottom:14px;}
+  .npx-footer ul{display:grid;gap:8px;}
+  .npx-footer a:hover{color:var(--npx-amber);}
+  .npx-footer-bottom{
+    border-top:1px solid rgba(216,195,166,.22);padding-top:18px;display:flex;justify-content:space-between;
+    gap:14px;flex-wrap:wrap;font-size:12.5px;color:#a58a6c;
+  }
+  .npx-footer-logo{display:flex;align-items:center;gap:10px;color:#ffe9c6;font-weight:800;font-size:19px;margin-bottom:12px;}
+
+  /* Toast / 回到顶部 */
+  .npx-toast{
+    position:fixed;left:50%;bottom:94px;transform:translate(-50%,20px);background:#4a3524;color:#ffe9c6;
+    padding:11px 22px;border-radius:999px;font-size:13.5px;opacity:0;pointer-events:none;transition:.3s;z-index:200;
+    box-shadow:0 10px 26px rgba(0,0,0,.28);
+  }
+  .npx-toast.is-on{opacity:1;transform:translate(-50%,0);}
+  .npx-top{
+    position:fixed;right:22px;bottom:24px;width:46px;height:46px;border-radius:50%;border:none;
+    background:var(--npx-amber);color:#fff;font-size:18px;box-shadow:0 8px 22px rgba(232,147,31,.42);
+    opacity:0;pointer-events:none;transition:.3s;z-index:150;
+  }
+  .npx-top.is-on{opacity:1;pointer-events:auto;}
+  .npx-top:hover{background:var(--npx-amber-deep);}
+
+  /* 弹窗 */
+  .npx-modal{
+    position:fixed;inset:0;background:rgba(58,40,26,.55);display:none;place-items:center;z-index:300;padding:20px;
+  }
+  .npx-modal.is-on{display:grid;}
+  .npx-modal-box{
+    background:var(--npx-cream);border-radius:20px;max-width:520px;width:100%;padding:26px;
+    box-shadow:0 24px 60px rgba(0,0,0,.3);position:relative;max-height:88vh;overflow:auto;
+  }
+  .npx-modal-box h3{font-size:20px;margin-bottom:8px;}
+  .npx-modal-box p{font-size:13.5px;color:var(--npx-brown-soft);margin-bottom:14px;}
+  .npx-modal-close{
+    position:absolute;right:14px;top:12px;border:none;background:var(--npx-cream-2);border-radius:50%;
+    width:32px;height:32px;font-size:16px;color:var(--npx-brown);
+  }
+  .npx-share-list{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;}
+  .npx-share-list button{
+    border:1px solid var(--npx-line);background:#fff;border-radius:999px;padding:8px 18px;font-size:13.5px;
+    color:var(--npx-brown);transition:.2s;
+  }
+  .npx-share-list button:hover{border-color:var(--npx-amber);color:var(--npx-amber-deep);}
+  .npx-modal-form input,.npx-modal-form textarea{
+    width:100%;border:1px solid var(--npx-line);border-radius:10px;padding:9px 12px;font-size:13.5px;
+    margin-bottom:10px;font-family:inherit;outline:none;background:#fff;color:var(--npx-brown);
+  }
+  .npx-modal-form input:focus,.npx-modal-form textarea:focus{border-color:var(--npx-amber);}
+
+  @media(max-width:980px){
+    .npx-hero-grid,.npx-focus-grid,.npx-about-grid,.npx-join{grid-template-columns:1fr;}
+    .npx-stream-grid,.npx-topic-grid{grid-template-columns:repeat(2,1fr);}
+    .npx-maker-grid{grid-template-columns:repeat(2,1fr);}
+    .npx-review-grid{column-count:2;}
+    .npx-footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:760px){
+    .npx-nav,.npx-search{display:none;}
+    .npx-burger{display:flex;}
+    .npx-head-tools .npx-btn{display:none;}
+    .npx-hero{padding:36px 0 20px;}
+    .npx-stream-grid,.npx-topic-grid,.npx-maker-grid{grid-template-columns:1fr;}
+    .npx-review-grid{column-count:1;}
+    .npx-footer-grid{grid-template-columns:1fr;}
+    .npx-join{padding:26px;}
+    .npx-hero-float{display:none;}
+    .npx-notice .npx-wrap{gap:8px;}
+  }
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶：公告条 + 页头 -->
+<div class="npx-sticky">
+  <div class="npx-notice" role="region" aria-label="官方公告">
+    <div class="npx-wrap">
+      <span class="npx-notice-tag">官方发布</span>
+      <div class="npx-notice-track" id="npxNoticeTrack">
+        <p class="npx-notice-item is-on">「温柔瞬间」2026 冬季征集开启，新增 12 个治愈短片合集入口</p>
+        <p class="npx-notice-item">创作挑战 #生活里的小痒点 第二期报名中，投稿即可获得官方推荐位</p>
+        <p class="npx-notice-item">11 月内容生态月报已上线，新增 348 位原创创作者入驻挠脚心</p>
+        <p class="npx-notice-item">官方发布：高清画质频道全面升级，支持 60 帧生活记录短片</p>
+      </div>
+    </div>
+  </div>
+
+  <header class="npx-header">
+    <div class="npx-wrap">
+      <a href="#top" class="npx-logo" aria-label="挠脚心官方网站首页">
+        <span class="npx-logo-mark" aria-hidden="true">痒</span>
+        <span>挠脚心
+          <small>NAO JIAO XIN</small>
+        </span>
+      </a>
+      <nav class="npx-nav" aria-label="主导航">
+        <a href="#top">首页</a>
+        <a href="#npxFocus">焦点内容</a>
+        <a href="#npxStream">热门视频</a>
+        <a href="#npxTopic">专题企划</a>
+        <a href="#npxMaker">创作者</a>
+        <a href="#npxAbout">品牌故事</a>
+        <a href="#npxFaq">帮助</a>
+        <a href="#npxJoin">联系</a>
+      </nav>
+      <div class="npx-head-tools">
+        <form class="npx-search" id="npxSearchForm" role="search" onsubmit="return false;">
+          <input type="search" id="npxSearchInput" placeholder="搜索短片 / 创作者" aria-label="站内搜索">
+          <button type="button" id="npxSearchBtn" aria-label="搜索">➜</button>
+        </form>
+        <button class="npx-btn npx-btn-primary" data-open="join">我要投稿</button>
+        <button class="npx-burger" id="npxBurger" aria-label="展开导航" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="npx-mobile-nav" id="npxMobileNav">
+      <a href="#top">首页</a>
+      <a href="#npxFocus">焦点内容</a>
+      <a href="#npxStream">热门视频</a>
+      <a href="#npxTopic">专题企划</a>
+      <a href="#npxMaker">创作者</a>
+      <a href="#npxAbout">品牌故事</a>
+      <a href="#npxFaq">帮助</a>
+      <a href="#npxJoin">联系投稿</a>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="npx-hero">
+    <div class="npx-wrap npx-hero-grid">
+      <div>
+        <span class="npx-hero-badge"><i></i>挠脚心官方网站 · 官方运营</span>
+        <h1>挠脚心<em>·</em>让生活被轻轻逗笑</h1>
+        <p class="npx-hero-sub">一家专注轻松治愈短片的视频品牌官网，用真实影像记录细小的快乐。</p>
+        <p class="npx-hero-desc">
+          挠脚心不是一个讲道理的网站。我们更愿意拍下朋友之间突然的玩笑、孩子第一次学会系鞋带的笨拙、奶奶说起往事时忍不住的笑意。作为持续运营的原创视频社区，我们把「被生活逗笑的那一刻」当作最值得保存的精品内容。
+        </p>
+        <div class="npx-hero-actions">
+          <a href="#npxStream" class="npx-btn npx-btn-primary">浏览热门短片</a>
+          <a href="#npxAbout" class="npx-btn npx-btn-ghost">了解品牌故事</a>
+          <button class="npx-btn npx-btn-soft" data-open="join">加入创作社区</button>
+        </div>
+        <div class="npx-hero-stats">
+          <div class="npx-stat"><b data-count="2680">0</b><span>原创短片（条）</span></div>
+          <div class="npx-stat"><b data-count="348">0</b><span>签约创作者（位）</span></div>
+          <div class="npx-stat"><b data-count="126">0</b><span>累计专题企划（期）</span></div>
+        </div>
+      </div>
+      <div class="npx-hero-visual">
+        <div class="npx-hero-visual-main">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 440'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23fde3b5'/%3E%3Cstop offset='1' stop-color='%23e8931f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='440' fill='url(%23g1)'/%3E%3Ccircle cx='520' cy='86' r='58' fill='%23fff3d8' opacity='.75'/%3E%3Cpath d='M0 330 Q160 250 320 320 T640 300 L640 440 L0 440 Z' fill='%23c96f14' opacity='.55'/%3E%3Cpath d='M0 370 Q180 300 340 360 T640 350 L640 440 L0 440 Z' fill='%234a3524' opacity='.55'/%3E%3Ccircle cx='196' cy='196' r='30' fill='%23fff6e8'/%3E%3Ccircle cx='286' cy='196' r='30' fill='%23fff6e8'/%3E%3Ccircle cx='196' cy='196' r='13' fill='%234a3524'/%3E%3Ccircle cx='286' cy='196' r='13' fill='%234a3524'/%3E%3Cpath d='M206 258 Q241 292 276 258' stroke='%234a3524' stroke-width='13' fill='none' stroke-linecap='round'/%3E%3Cpath d='M420 180 q40 -34 80 0 q-40 34 -80 0' fill='%23fff6e8' opacity='.85'/%3E%3C/svg%3E" alt="挠脚心官方网站首屏插画：橙黄暖色调的笑脸与生活场景手绘">
+        </div>
+        <div class="npx-hero-float one"><span class="dot">🎬</span>今日新增 26 条短片</div>
+        <div class="npx-hero-float two"><span class="dot">💛</span>社区口碑 4.9 分</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点内容 -->
+  <section class="npx-section" id="npxFocus">
+    <div class="npx-wrap">
+      <div class="npx-section-head">
+        <span class="npx-eyebrow">焦点内容</span>
+        <h2>本周被反复重放的挠脚心短片</h2>
+        <p>由编辑部与社区口碑共同挑选，聚焦真实、温暖、有力量的原创影像，呈现挠脚心内容生态的品质底色。</p>
+      </div>
+      <div class="npx-focus-grid">
+        <article class="npx-vcard">
+          <div class="npx-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='f1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ffd88a'/%3E%3Cstop offset='1' stop-color='%23e05a3a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23f1)'/%3E%3Ccircle cx='660' cy='90' r='90' fill='%23fff6e8' opacity='.35'/%3E%3Crect x='80' y='270' width='300' height='16' rx='8' fill='%23fff6e8' opacity='.7'/%3E%3Crect x='80' y='306' width='200' height='16' rx='8' fill='%23fff6e8' opacity='.45'/%3E%3Cpath d='M470 300 q60 -110 130 -20 q-70 80 -130 20' fill='%23fff6e8' opacity='.6'/%3E%3C/svg%3E" alt="焦点短片封面：奶奶厨房里的笑声记录">
+            <div class="npx-cover-mask"></div>
+            <span class="npx-cover-tag">本周焦点</span>
+            <span class="npx-play"><i>▶</i></span>
+          </div>
+          <div class="npx-vcard-body">
+            <div class="npx-tags"><span class="npx-tag">日常记录</span><span class="npx-tag">治愈影像</span><span class="npx-tag">高清</span></div>
+            <h3>奶奶把糖当盐放进了汤里，全家笑了一整个下午</h3>
+            <p>一条 6 分 12 秒的家庭纪录短片。没有剧本，没有摆拍，只有厨房里不断冒出的笑声。挠脚心编辑部认为，这正是社区最想留住的真实瞬间。</p>
+            <div class="npx-meta">
+              <span>作者：阿梨的日常 · 播放 12.8 万</span>
+              <div class="npx-actions">
+                <button class="npx-act" data-like>♡ <b>2864</b></button>
+                <button class="npx-act" data-save>☆ 收藏</button>
+                <button class="npx-act" data-share>↗ 分享</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div class="npx-focus-side">
+          <article class="npx-vcard">
+            <div class="npx-cover">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='f2' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%237bc7c1'/%3E%3Cstop offset='1' stop-color='%232f7f7a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23f2)'/%3E%3Cpath d='M0 250 Q160 180 320 240 T640 230 L640 360 L0 360 Z' fill='%23e4f6f3' opacity='.5'/%3E%3Ccircle cx='150' cy='110' r='42' fill='%23e4f6f3' opacity='.85'/%3E%3Crect x='380' y='90' width='180' height='12' rx='6' fill='%23e4f6f3' opacity='.65'/%3E%3C/svg%3E" alt="焦点短片封面：清晨菜市场的声音采集">
+              <span class="npx-cover-tag">编辑推荐</span>
+              <span class="npx-play"><i>▶</i></span>
+            </div>
+            <div class="npx-vcard-body">
+              <h3>清晨六点的菜市场，藏着一座城市最松弛的声音</h3>
+              <p>声音采集 + 城市探索，用 8 分钟听见烟火气。</p>
+              <div class="npx-meta">
+                <span>作者：老周拍城市</span>
+                <div class="npx-actions">
+                  <button class="npx-act" data-like>♡ <b>1420</b></button>
+                  <button class="npx-act" data-save>☆</button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="npx-vcard">
+            <div class="npx-cover">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='f3' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23a99cf5'/%3E%3Cstop offset='1' stop-color='%235a4bb5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23f3)'/%3E%3Ccircle cx='480' cy='120' r='70' fill='%23f0edff' opacity='.3'/%3E%3Cpath d='M90 260 q80 -80 160 0 q80 -80 160 0' stroke='%23f0edff' stroke-width='10' fill='none' opacity='.7' stroke-linecap='round'/%3E%3C/svg%3E" alt="焦点短片封面：手作陶艺捏出歪歪扭扭的小猫">
+              <span class="npx-cover-tag">新人榜第一</span>
+              <span class="npx-play"><i>▶</i></span>
+            </div>
+            <div class="npx-vcard-body">
+              <h3>第一次做陶，我捏出了一只歪掉的小猫</h3>
+              <p>手作 DIY 的失败现场，反而成了最受欢迎的一条。</p>
+              <div class="npx-meta">
+                <span>作者：慢慢捏</span>
+                <div class="npx-actions">
+                  <button class="npx-act" data-like>♡ <b>998</b></button>
+                  <button class="npx-act" data-save>☆</button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门视频流 -->
+  <section class="npx-section" id="npxStream" style="background:#fffdf8;">
+    <div class="npx-wrap">
+      <div class="npx-section-head">
+        <span class="npx-eyebrow">热门视频流</span>
+        <h2>正在被挠脚心社区点开的短片</h2>
+        <p>标签筛选即刻生效，点击卡片上的按钮可以点赞、收藏与分享，所有互动都在本地即时反馈。</p>
+      </div>
+      <div class="npx-filter-bar" id="npxFilterBar">
+        <button class="npx-chip is-active" data-filter="all">全部</button>
+        <button class="npx-chip" data-filter="日常记录">日常记录</button>
+        <button class="npx-chip" data-filter="经验分享">经验分享</button>
+        <button class="npx-chip" data-filter="人物访谈">人物访谈</button>
+        <button class="npx-chip" data-filter="手作DIY">手作DIY</button>
+        <button class="npx-chip" data-filter="萌宠日常">萌宠日常</button>
+        <button class="npx-chip" data-filter="城市探索">城市探索</button>
+      </div>
+
+      <div class="npx-stream-grid" id="npxStreamGrid">
+        <article class="npx-vcard" data-cat="日常记录">
+          <div class="npx-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='s1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ffc9a3'/%3E%3Cstop offset='1' stop-color='%23ef7d52'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23s1)'/%3E%3Ccircle cx='120' cy='100' r='46' fill='%23fff2e6' opacity='.7'/%3E%3Crect x='300' y='210' width='240' height='14' rx='7' fill='%23fff2e6' opacity='.6'/%3E%3Crect x='300' y='246' width='150' height='14' rx='7' fill='%23fff2e6' opacity='.4'/%3E%3C/svg%3E" alt="短片封面：爸爸第一次给女儿扎辫子">
+            <div class="npx-cover-mask"></div>
+            <span class="npx-cover-tag">日常记录</span>
+            <span class="npx-play"><i>▶</i></span>
+          </div>
+          <div class="npx-vcard-body">
+            <h3>爸爸第一次给女儿扎辫子，用了整整四十分钟</h3>
+            <p>手忙脚乱但很认真。这条短片让评论区集体晒出了自家同款爸爸。</p>
+            <div class="npx-tags"><span class="npx-tag">亲子成长</span><span class="npx-tag">温暖</span></div>
+            <div class="npx-meta">
+              <span>小满一家 · 8.2 万播放</span>
+              <div class="npx-actions">
+                <button class="npx-act" data-like>♡ <b>1820</b></button>
+                <button class="npx-act" data-save>☆</button>
+                <button class="npx-act" data-share>↗</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="npx-vcard" data-cat="经验分享">
+          <div class="npx-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='s2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2399d8b4'/%3E%3Cstop offset='1' stop-color='%233f8f66'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23s2)'/%3E%3Cpath d='M60 300 L180 180 L300 300 Z' fill='%23e8f7ee' opacity='.5'/%3E%3Ccircle cx='480' cy='110' r='50' fill='%23e8f7ee' opacity='.6'/%3E%3C/svg%3E" alt="短片封面：通勤路上十分钟的剪辑练习">
+            <div class="npx-cover-mask"></div>
+            <span class="npx-cover-tag">经验分享</span>
+            <span class="npx-play"><i>▶</i></span>
+          </div>
+          <div class="npx-vcard-body">
+            <h3>每天通勤十分钟，我把手机相册剪成了一部小片</h3>
+            <p>从素材整理到配乐选择，分享一套普通人也能上手的剪辑思路。</p>
+            <div class="npx-tags"><span class="npx-tag">教程干货</span><span class="npx-tag">创作幕后</span></div>
+            <div class="npx-meta">
+              <span>剪辑手小柯 · 6.6 万播放</span>
+              <div class="npx-actions">
+                <button class="npx-act" data-like>♡ <b>1356</b></button>
+                <button class="npx-act" data-save>☆</button>
+                <button class="npx-act" data-share>↗</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="npx-vcard" data-cat="人物访谈">
+          <div class="npx-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='s3' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%235b6b8a'/%3E%3Cstop offset='1' stop-color='%23232e42'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23s3)'/%3E%3Ccircle cx='200' cy='170' r='64' fill='%23c8d3e8' opacity='.55'/%3E%3Ccircle cx='420' cy='170' r='64' fill='%23c8d3e8' opacity='.35'/%3E%3Crect x='160' y='270' width='320' height='12' rx='6' fill='%23c8d3e8' opacity='.5'/%3E%3C/svg%3E" alt="短片封面：修表匠老陈的四十年访谈">
+            <div class="npx-cover-mask"></div>
+            <span class="npx-cover-tag">人物访谈</span>
+            <span class="npx-play"><i>▶</i></span>
+          </div>
+          <div class="npx-vcard-body">
+            <h3>修表匠老陈：我修了四十年时间，也修好了自己的脾气</h3>
+            <p>一间六平方米的工作室，一段关于匠心与耐心的深度访谈。</p>
+            <div class="npx-tags"><span class="npx-tag">行业观察</span><span class="npx-tag">匠心</span></div>
+            <div class="npx-meta">
+              <span>访谈栏目组 · 9.4 万播放</span>
+              <div class="npx-actions">
+                <button class="npx-act" data-like>♡ <b>2410</b></button>
+                <button class="npx-act" data-save>☆</button>
+                <button class="npx-act" data-share>↗</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="npx-vcard" data-cat="手作DIY">
+          <div class="npx-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='s4' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f0b6c8'/%3E%3Cstop offset='1' stop-color='%23c2557d'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23s4)'/%3E%3Cpath d='M240 260 q80 -140 160 0 z' fill='%23ffe3ec' opacity='.65'/%3E%3Ccircle cx='320' cy='130' r='28' fill='%23ffe3ec' opacity='.8'/%3E%3C/svg%3E" alt="短片封面：旧毛衣改成猫咪窝">
+            <div class="npx-cover-mask"></div>
+            <span class="npx-cover-tag">手作DIY</span>
+            <span class="npx-play"><i>▶</i></span>
+          </div>
+          <div class="npx-vcard-body">
+            <h3>把不穿的旧毛衣拆了，给猫织了一个窝</h3>
+            <p>零基础手作教程，附赠猫咪试睡翻车现场。</p>
+            <div class="npx-tags"><span class="npx-tag">生活方式</span><span class="npx-tag">创意</span></div>
+            <div class="npx-meta">
+              <span>毛线星球 · 5.1 万播放</span>
+              <div class="npx-actions">
+                <button class="npx-act" data-like>♡ <b>870</b></button>
+                <button class="npx-act" data-save>☆</button>
+                <button class="npx-act" data-share>↗</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="npx-vcard" data-cat="萌宠日常">
+          <div class="npx-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='s5' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23ffe6a8'/%3E%3Cstop offset='1' stop-color='%23d99a2b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23s5)'/%3E%3Cellipse cx='320' cy='250' rx='130' ry='56' fill='%23fff6e0' opacity='.6'/%3E%3Ccircle cx='270' cy='180' r='24' fill='%234a3524' opacity='.8'/%3E%3Ccircle cx='370' cy='180' r='24' fill='%234a3524' opacity='.8'/%3E%3C/svg%3E" alt="短片封面：三花猫第一次见到雪">
+            <div class="npx-cover-mask"></div>
+            <span class="npx-cover-tag">萌宠日常</span>
+            <span class="npx-play"><i>▶</i></span>
+          </div>
+          <div class="npx-vcard-body">
+            <h3>三花猫第一次见到雪，在门口犹豫了整整两分钟</h3>
+            <p>镜头稳、配乐轻，一条适合深夜反复观看的治愈影像。</p>
+            <div class="npx-tags"><span class="npx-tag">治愈影像</span><span class="npx-tag">陪伴</span></div>
+            <div class="npx-meta">
+              <span>橘子和年糕 · 7.7 万播放</span>
+              <div class="npx-actions">
+                <button class="npx-act" data-like>♡ <b>1932</b></button>
+                <button class="npx-act" data-save>☆</button>
+                <button class="npx-act" data-share>↗</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="npx-vcard" data-cat="城市探索">
+          <div class="npx-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='s6' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237aa7d9'/%3E%3Cstop offset='1' stop-color='%23294a72'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23s6)'/%3E%3Crect x='80' y='180' width='60' height='120' fill='%23d9e8fa' opacity='.5'/%3E%3Crect x='170' y='140' width='60' height='160' fill='%23d9e8fa' opacity='.4'/%3E%3Crect x='260' y='200' width='60' height='100' fill='%23d9e8fa' opacity='.55'/%3E%3Ccircle cx='500' cy='100' r='40' fill='%23ffe9b5' opacity='.8'/%3E%3C/svg%3E" alt="短片封面：老城区最后一班绿皮公交">
+            <div class="npx-cover-mask"></div>
+            <span class="npx-cover-tag">城市探索</span>
+            <span class="npx-play"><i>▶</i></span>
+          </div>
+          <div class="npx-vcard-body">
+            <h3>坐上老城区最后一班绿皮公交，从终点站回到起点</h3>
+            <p>在地文化记录，沿途经过七家开了二十年的小店。</p>
+            <div class="npx-tags"><span class="npx-tag">旅行见闻</span><span class="npx-tag">真实</span></div>
+            <div class="npx-meta">
+              <span>城市漫游者 · 11.2 万播放</span>
+              <div class="npx-actions">
+                <button class="npx-act" data-like>♡ <b>3105</b></button>
+                <button class="npx-act" data-save>☆</button>
+                <button class="npx-act" data-share>↗</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题企划 -->
+  <section class="npx-section" id="npxTopic">
+    <div class="npx-wrap">
+      <div class="npx-section-head">
+        <span class="npx-eyebrow">专题企划</span>
+        <h2>这些专题，把笑声拼成了完整的故事</h2>
+        <p>挠脚心官方发布的多期原创企划，围绕生活细节展开多元表达，形成持续生长的内容生态。</p>
+      </div>
+      <div class="npx-topic-grid">
+        <a class="npx-topic" href="#npxJoin" data-open="join">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 420'%3E%3Cdefs%3E%3ClinearGradient id='t1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f7b955'/%3E%3Cstop offset='1' stop-color='%239a5a12'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='420' fill='url(%23t1)'/%3E%3Ccircle cx='450' cy='90' r='70' fill='%23ffe9c6' opacity='.35'/%3E%3Cpath d='M0 330 Q150 260 300 320 T600 300 L600 420 L0 420 Z' fill='%234a3524' opacity='.5'/%3E%3C/svg%3E" alt="专题封面：生活里的小痒点冬季征集">
+          <div class="npx-topic-mask"></div>
+          <div class="npx-topic-body">
+            <h3>生活里的小痒点</h3>
+            <p>征集那些让人忍不住笑出声的日常瞬间，第二期正在报名中。</p>
+            <span class="npx-topic-state">征集中 · 已收 486 条</span>
+          </div>
+        </a>
+        <a class="npx-topic" href="#npxStream">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 420'%3E%3Cdefs%3E%3ClinearGradient id='t2' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%239bd3c9'/%3E%3Cstop offset='1' stop-color='%232c6b62'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='420' fill='url(%23t2)'/%3E%3Ccircle cx='160' cy='130' r='54' fill='%23e3f7f2' opacity='.55'/%3E%3Crect x='320' y='250' width='200' height='14' rx='7' fill='%23e3f7f2' opacity='.5'/%3E%3C/svg%3E" alt="专题封面：一个人的厨房第一季">
+          <div class="npx-topic-mask"></div>
+          <div class="npx-topic-body">
+            <h3>一个人的厨房</h3>
+            <p>六位独居创作者，六顿认真做完的晚饭，记录生活方式的选择。</p>
+            <span class="npx-topic-state">已完结 · 全 6 集</span>
+          </div>
+        </a>
+        <a class="npx-topic" href="#npxMaker">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 420'%3E%3Cdefs%3E%3ClinearGradient id='t3' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23b7a9f0'/%3E%3Cstop offset='1' stop-color='%23463f86'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='420' fill='url(%23t3)'/%3E%3Cpath d='M120 300 q90 -120 180 0' stroke='%23efeaff' stroke-width='12' fill='none' opacity='.6' stroke-linecap='round'/%3E%3Ccircle cx='450' cy='120' r='48' fill='%23efeaff' opacity='.5'/%3E%3C/svg%3E" alt="专题封面：镜头背后的普通人访谈季">
+          <div class="npx-topic-mask"></div>
+          <div class="npx-topic-body">
+            <h3>镜头背后的普通人</h3>
+            <p>把镜头对准拍摄者本身，聊聊创作动机与真实生活。</p>
+            <span class="npx-topic-state">更新至第 9 期</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者矩阵 -->
+  <section class="npx-section" id="npxMaker" style="background:#fffdf8;">
+    <div class="npx-wrap">
+      <div class="npx-section-head">
+        <span class="npx-eyebrow">创作者矩阵</span>
+        <h2>挠脚心社区里，值得长期关注的创作者</h2>
+        <p>他们用各自的方式记录生活。点击卡片可查看创作者简介与代表作品方向。</p>
+      </div>
+      <div class="npx-maker-grid">
+        <article class="npx-maker" data-maker="阿梨的日常" data-field="家庭日常记录" data-bio="擅长用不加修饰的镜头拍下一家人的日常，作品节奏舒缓，评论区常被称为「电子外婆家」。">
+          <div class="npx-avatar" style="background:linear-gradient(135deg,#f7b955,#e05a3a);">梨</div>
+          <h3>阿梨的日常</h3>
+          <div class="npx-maker-field">家庭日常记录</div>
+          <p>拍奶奶、拍厨房、拍一家人围坐的饭桌。她说镜头是留住笑声最好的容器。</p>
+          <div class="npx-maker-data"><span><b>146</b>作品</span><span><b>38.6万</b>关注</span></div>
+        </article>
+        <article class="npx-maker" data-maker="老周拍城市" data-field="城市探索 / 声音采集" data-bio="十年城市影像记录者，偏好清晨与深夜的街道，认为声音比画面更能保存一座城市的性格。">
+          <div class="npx-avatar" style="background:linear-gradient(135deg,#7aa7d9,#294a72);">周</div>
+          <h3>老周拍城市</h3>
+          <div class="npx-maker-field">城市探索 / 声音采集</div>
+          <p>十年城市影像记录者，习惯在清晨六点出门，认为声音比画面更懂一座城市。</p>
+          <div class="npx-maker-data"><span><b>203</b>作品</span><span><b>52.1万</b>关注</span></div>
+        </article>
+        <article class="npx-maker" data-maker="慢慢捏" data-field="手作DIY / 治愈影像" data-bio="陶艺与毛线爱好者，专注记录手作过程中的失败与惊喜，主张「手笨也没关系，动手就值得被记录」。">
+          <div class="npx-avatar" style="background:linear-gradient(135deg,#a99cf5,#5a4bb5);">慢</div>
+          <h3>慢慢捏</h3>
+          <div class="npx-maker-field">手作DIY / 治愈影像</div>
+          <p>陶艺与毛线爱好者，专注记录手作过程中的失败与惊喜，主张动手就值得被记录。</p>
+          <div class="npx-maker-data"><span><b>98</b>作品</span><span><b>21.4万</b>关注</span></div>
+        </article>
+        <article class="npx-maker" data-maker="剪辑手小柯" data-field="剪辑教程 / 创作幕后" data-bio="从电视台剪辑师转型为独立创作者，用通俗语言拆解剪辑思路，是许多新人创作者的第一位入门老师。">
+          <div class="npx-avatar" style="background:linear-gradient(135deg,#99d8b4,#3f8f66);">柯</div>
+          <h3>剪辑手小柯</h3>
+          <div class="npx-maker-field">剪辑教程 / 创作幕后</div>
+          <p>用通俗语言拆解剪辑思路，是许多新人创作者在挠脚心的第一位入门老师。</p>
+          <div class="npx-maker-data"><span><b>174</b>作品</span><span><b>44.9万</b>关注</span></div>
+        </article>
+        <article class="npx-maker" data-maker="橘子和年糕" data-field="萌宠日常" data-bio="两只猫的专属摄影团队，画面干净、光线自然，擅长捕捉猫咪情绪转换的瞬间。">
+          <div class="npx-avatar" style="background:linear-gradient(135deg,#ffe6a8,#d99a2b);">橘</div>
+          <h3>橘子和年糕</h3>
+          <div class="npx-maker-field">萌宠日常</div>
+          <p>两只猫的专属摄影团队，画面干净、光线自然，擅长捕捉猫咪情绪转换的瞬间。</p>
+          <div class="npx-maker-data"><span><b>312</b>作品</span><span><b>67.3万</b>关注</span></div>
+        </article>
+        <article class="npx-maker" data-maker="访谈栏目组" data-field="人物访谈 / 行业观察" data-bio="挠脚心官方签约栏目团队，专注普通人职业故事与手艺人群体的深度记录，坚持长镜头与真实对话。">
+          <div class="npx-avatar" style="background:linear-gradient(135deg,#5b6b8a,#232e42);">访</div>
+          <h3>访谈栏目组</h3>
+          <div class="npx-maker-field">人物访谈 / 行业观察</div>
+          <p>官方签约栏目团队，专注普通人职业故事，坚持长镜头与真实对话。</p>
+          <div class="npx-maker-data"><span><b>64</b>作品</span><span><b>29.8万</b>关注</span></div>
+        </article>
+        <article class="npx-maker" data-maker="小满一家" data-field="亲子成长" data-bio="一个普通的四口之家，记录孩子成长中的笨拙与勇敢，主张「不完美才是真实的家」。">
+          <div class="npx-avatar" style="background:linear-gradient(135deg,#ffc9a3,#ef7d52);">满</div>
+          <h3>小满一家</h3>
+          <div class="npx-maker-field">亲子成长</div>
+          <p>普通的四口之家，记录孩子成长中的笨拙与勇敢，不完美才是真实的家。</p>
+          <div class="npx-maker-data"><span><b>122</b>作品</span><span><b>33.5万</b>关注</span></div>
+        </article>
+        <article class="npx-maker" data-maker="毛线星球" data-field="生活方式 / 创意手作" data-bio="把旧物改造成新东西的长期主义者，作品附带详细教程，强调可持续与低门槛的手作乐趣。">
+          <div class="npx-avatar" style="background:linear-gradient(135deg,#f0b6c8,#c2557d);">线</div>
+          <h3>毛线星球</h3>
+          <div class="npx-maker-field">生活方式 / 创意手作</div>
+          <p>把旧物改造成新东西的长期主义者，作品附带详细教程，强调低门槛的手作乐趣。</p>
+          <div class="npx-maker-data"><span><b>89</b>作品</span><span><b>18.2万</b>关注</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 品牌故事与深度解析 -->
+  <section class="npx-section npx-about" id="npxAbout">
+    <div class="npx-wrap">
+      <div class="npx-section-head">
+        <span class="npx-eyebrow">品牌故事</span>
+        <h2>挠脚心：一间装着笑声的影像档案馆</h2>
+        <p>我们希望搭建一个值得信赖的视频品牌官网，让每一个普通人的轻松瞬间都有被看见的机会。</p>
+      </div>
+      <div class="npx-about-grid">
+        <div>
+          <p>挠脚心创立于 2019 年，是一家以轻松治愈短片为核心的原创视频社区。品牌名取自生活里最朴素的体验：被轻轻挠到脚心时，人会不受控制地笑出声。我们相信，笑不是消遣，而是一种真实的力量。它让人与人之间的距离缩短，让疲惫的一天有了可以回忆的落点。</p>
+          <p>作为持续运营的视频品牌平台，挠脚心始终坚持「用户至上」的内容观：不做猎奇，不追情绪刺激，不为了流量扭曲生活本来的样子。我们更愿意把镜头交给普通人——奶奶、父亲、修表匠、上班族、独居青年、社区志愿者。他们的故事不宏大，却构成了这个时代最真实的纹理。</p>
+          <p>业务层面，挠脚心构建了从内容征集、创作者孵化、专题策划到高清成片发布的完整链路。官方每月发布内容生态报告，公开数据、公开标准，让创作者清楚知道自己的作品为何被推荐，也让观众明白每一条短片背后的选择依据。这种透明，是品牌口碑的基础。</p>
+          <p>在垂直领域深耕多年，挠脚心形成了「日常记录、手作、萌宠、城市、访谈、亲子」六大内容方向，签约与合作创作者超过 348 位，累计产出原创短片 2680 余条，专题企划 126 期。这些数字背后，是一个不断多元、包容、共同成长的内容生态。</p>
+          <p>我们认为，一家好的视频企业不该只提供观看，还要提供参与的可能。因此挠脚心长期开放投稿入口、创作挑战与年度比赛，鼓励新人上传第一支作品。哪怕画质普通、剪辑生涩，只要真实、有温度，就可能在首页被推荐。这是我们对「值得信赖」四个字最具体的理解。</p>
+          <p>未来，挠脚心会继续在高清画质、播放体验、创作者工具上投入，也会承担更多社会责任：关注社区老人记录、支持乡村影像教育、为公益组织提供免费拍摄指导。品牌故事不是写出来的，是一条一条短片堆出来的。我们希望这条路上，始终有笑声，也始终有你。</p>
+          <div class="npx-keywords">
+            <span class="npx-kw">官方网站</span>
+            <span class="npx-kw">内容生态</span>
+            <span class="npx-kw">原创</span>
+            <span class="npx-kw">正版</span>
+            <span class="npx-kw">高清</span>
+            <span class="npx-kw">社区</span>
+            <span class="npx-kw">深耕</span>
+            <span class="npx-kw">匠心</span>
+            <span class="npx-kw">社会责任</span>
+            <span class="npx-kw">用户首选</span>
+          </div>
+        </div>
+        <div class="npx-about-list">
+          <div class="npx-about-item">
+            <span class="ico">◎</span>
+            <div>
+              <h3>定位：轻松治愈型视频社区</h3>
+              <p>以日常记录为入口，以真实生活为素材，形成有辨识度的品牌调性。</p>
+            </div>
+          </div>
+          <div class="npx-about-item">
+            <span class="ico">✦</span>
+            <div>
+              <h3>使命：让普通人的瞬间被认真保存</h3>
+              <p>持续运营的内容机制，让每一个小故事都有机会被看见、被讨论、被记住。</p>
+            </div>
+          </div>
+          <div class="npx-about-item">
+            <span class="ico">◈</span>
+            <div>
+              <h3>方法：透明推荐 + 多元表达</h3>
+              <p>公开推荐标准，鼓励不同地域、不同年龄、不同职业的创作者共同参与。</p>
+            </div>
+          </div>
+          <div class="npx-about-item">
+            <span class="ico">❖</span>
+            <div>
+              <h3>承诺：品质与陪伴</h3>
+              <p>坚持正版、原创与高品质内容，用长期主义换取社区口碑与用户信赖。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用户评价 -->
+  <section class="npx-section" id="npxReview">
+    <div class="npx-wrap">
+      <div class="npx-section-head">
+        <span class="npx-eyebrow">社区口碑</span>
+        <h2>来自观众与创作者的真实反馈</h2>
+        <p>这些评价来自挠脚心社区的不同角落，语气、长度与关注点各不相同，却是品牌最在意的声音。</p>
+      </div>
+      <div class="npx-review-grid">
+        <div class="npx-review">
+          <div class="npx-review-head">
+            <div class="npx-avatar" style="background:linear-gradient(135deg,#f7b955,#e05a3a);">林</div>
+            <div><b>林间散步</b><span>观众 · 关注 2 年</span></div>
+          </div>
+          <p>睡前刷十分钟挠脚心，已经成了我的固定习惯。它不刺激，也不催你点赞，就是安安静静地记录一些好笑的小事。</p>
+          <div class="npx-stars">★★★★★</div>
+        </div>
+        <div class="npx-review">
+          <div class="npx-review-head">
+            <div class="npx-avatar" style="background:linear-gradient(135deg,#99d8b4,#3f8f66);">陈</div>
+            <div><b>陈小满</b><span>创作者 · 亲子方向</span></div>
+          </div>
+          <p>第一次投稿没抱希望，结果三天后收到编辑的修改建议，非常具体。那种被认真对待的感觉，比上推荐位更珍贵。</p>
+          <div class="npx-stars">★★★★★</div>
+        </div>
+        <div class="npx-review">
+          <div class="npx-review-head">
+            <div class="npx-avatar" style="background:linear-gradient(135deg,#7aa7d9,#294a72);">王</div>
+            <div><b>王土土</b><span>观众 · 城市探索爱好者</span></div>
+          </div>
+          <p>专题做得很有诚意，《一个人的厨房》六集看完，我照着做了三顿饭。希望明年多做点系列。</p>
+          <div class="npx-stars">★★★★☆</div>
+        </div>
+        <div class="npx-review">
+          <div class="npx-review-head">
+            <div class="npx-avatar" style="background:linear-gradient(135deg,#a99cf5,#5a4bb5);">许</div>
+            <div><b>许愿不灵</b><span>创作者 · 手作方向</span></div>
+          </div>
+          <p>投稿流程清楚，审核时间也透明。作为小创作者，最怕流程不透明，这里没有这个问题。</p>
+          <div class="npx-stars">★★★★★</div>
+        </div>
+        <div class="npx-review">
+          <div class="npx-review-head">
+            <div class="npx-avatar" style="background:linear-gradient(135deg,#ffc9a3,#ef7d52);">苏</div>
+            <div><b>苏打水加冰</b><span>观众 · 关注 1 年</span></div>
+          </div>
+          <p>高清画质很舒服，投到电视上看也不糊。就是希望搜索功能再智能一点，有时候记不住标题。</p>
+          <div class="npx-stars">★★★★☆</div>
+        </div>
+        <div class="npx-review">
+          <div class="npx-review-head">
+            <div class="npx-avatar" style="background:linear-gradient(135deg,#ffe6a8,#d99a2b);">阿</div>
+            <div><b>阿灰与豆豆</b><span>创作者 · 萌宠方向</span></div>
+          </div>
+          <p>社区的评论区氛围是同类平台里少见的舒服，几乎没有恶意争吵。这一点我很珍惜。</p>
+          <div class="npx-stars">★★★★★</div>
+        </div>
+        <div class="npx-review">
+          <div class="npx-review-head">
+            <div class="npx-avatar" style="background:linear-gradient(135deg,#5b6b8a,#232e42);">周</div>
+            <div><b>周末不出门</b><span>观众 · 关注 3 年</span></div>
+          </div>
+          <p>从最早只有几十条片子看到现在，变化很大，但那种「不着急」的气质还在，挺难得的。</p>
+          <div class="npx-stars">★★★★★</div>
+        </div>
+        <div class="npx-review">
+          <div class="npx-review-head">
+            <div class="npx-avatar" style="background:linear-gradient(135deg,#f0b6c8,#c2557d);">木</div>
+            <div><b>木木下班了</b><span>创作者 · 日常记录</span></div>
+          </div>
+          <p>创作挑战的题目很有意思，逼着我去拍平时不会注意的东西。是很好的练习机会。</p>
+          <div class="npx-stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 企业动态 + FAQ -->
+  <section class="npx-section" id="npxFaq" style="background:#fffdf8;">
+    <div class="npx-wrap">
+      <div class="npx-about-grid" style="align-items:start;">
+        <div>
+          <span class="npx-eyebrow">企业动态</span>
+          <h2 style="font-size:clamp(24px,3.2vw,32px);margin:12px 0 20px;">挠脚心官方发布与更新日志</h2>
+          <div class="npx-news">
+            <div class="npx-news-item">
+              <div class="npx-news-date">11.18<br>2026</div>
+              <div>
+                <h3>「温柔瞬间」冬季征集正式开启</h3>
+                <p>新增 12 个治愈短片合集入口，投稿作品将获得官方专题页展示机会。</p>
+              </div>
+            </div>
+            <div class="npx-news-item">
+              <div class="npx-news-date">11.12<br>2026</div>
+              <div>
+                <h3>高清画质频道全面升级</h3>
+                <p>支持 60 帧生活记录短片播放，移动端与电视端同步优化加载速度。</p>
+              </div>
+            </div>
+            <div class="npx-news-item">
+              <div class="npx-news-date">11.05<br>2026</div>
+              <div>
+                <h3>内容生态月报（10 月）上线</h3>
+                <p>本月新增 348 位原创创作者入驻，社区投稿量环比增长 22%。</p>
+              </div>
+            </div>
+            <div class="npx-news-item">
+              <div class="npx-news-date">10.28<br>2026</div>
+              <div>
+                <h3>年度创作比赛报名通道开放</h3>
+                <p>面向所有注册创作者，设立日常记录、手作、萌宠三个方向，欢迎报名参与。</p>
+              </div>
+            </div>
+            <div class="npx-news-item">
+              <div class="npx-news-date">10.20<br>2026</div>
+              <div>
+                <h3>与三家公益机构达成影像合作</h3>
+                <p>为社区老人记录与乡村影像教育项目提供免费拍摄指导与设备支持。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="npx-eyebrow">帮助中心</span>
+          <h2 style="font-size:clamp(24px,3.2vw,32px);margin:12px 0 20px;">常见问题</h2>
+          <div class="npx-faq" style="margin:0;">
+            <details open>
+              <summary>如何向挠脚心投稿？</summary>
+              <p>注册账号后进入「我要投稿」，填写作品标题、方向与简介，上传成片链接或本地文件即可。审核通常在三个工作日内完成，结果会通过站内通知告知。</p>
+            </details>
+            <details>
+              <summary>投稿有画质要求吗？</summary>
+              <p>建议 1080P 及以上，横屏 16:9 更利于首页推荐。竖屏作品同样欢迎，会进入对应专题展示。画质不是唯一标准，真实与完整表达更重要。</p>
+            </details>
+            <details>
+              <summary>作品被推荐的标准是什么？</summary>
+              <p>我们从真实感、完成度、表达清晰度与社区适配度四个维度评估，标准公开可查。每月生态报告会说明推荐逻辑，不接受付费购买推荐位。</p>
+            </details>
+            <details>
+              <summary>能否下载自己喜欢的短片？</summary>
+              <p>官方发布的原创短片在作者授权范围内提供下载入口，用于个人学习与收藏，请勿用于商业用途。未授权作品不提供下载。</p>
+            </details>
+            <details>
+              <summary>如何参加创作挑战与比赛？</summary>
+              <p>在活动页点击报名，按主题上传作品即视为参与。比赛评审由编辑部与社区创作者共同组成，结果会在官方动态中公布。</p>
+            </details>
+            <details>
+              <summary>遇到内容问题如何反馈？</summary>
+              <p>每条短片页均有反馈入口，也可通过页脚邮箱联系。我们会在两个工作日内回复，涉及版权问题会优先处理。</p>
+            </details>
+            <details>
+              <summary>品牌是否提供合作拍摄支持？</summary>
+              <p>面向公益组织与非商业影像项目，挠脚心可提供拍摄指导、设备借用与专题展示支持，具体请通过合作联系表单沟通。</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 投稿与联系 -->
+  <section class="npx-section" id="npxJoin">
+    <div class="npx-wrap">
+      <div class="npx-join">
+        <div>
+          <h2>把你的第一支短片，交给挠脚心</h2>
+          <p>无论是三百块的手机还是三万块的机器，只要能记录一个真实的瞬间，就值得被上传。挠脚心官方期待与你一起，把这个社区做得更温暖、更多元、更有力量。</p>
+          <div class="npx-join-actions">
+            <button class="npx-btn npx-btn-soft" data-open="join">立即投稿</button>
+            <button class="npx-btn npx-btn-soft" data-open="share">分享给朋友</button>
+            <button class="npx-btn npx-btn-soft" data-open="report">意见反馈</button>
+          </div>
+        </div>
+        <form class="npx-join-form npx-modal-form" id="npxJoinForm" onsubmit="return false;">
+          <label for="npxJoinName">你的昵称</label>
+          <input id="npxJoinName" type="text" placeholder="例如：慢慢捏">
+          <label for="npxJoinMail">联系邮箱</label>
+          <input id="npxJoinMail" type="email" placeholder="用于接收审核结果">
+          <label for="npxJoinMsg">作品简介 / 想说的话</label>
+          <textarea id="npxJoinMsg" placeholder="简单介绍你的短片方向与创作动机"></textarea>
+          <button class="npx-btn npx-btn-primary" type="button" id="npxJoinSubmit" style="width:100%;">提交投稿意向</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="npx-footer">
+  <div class="npx-wrap">
+    <div class="npx-footer-grid">
+      <div>
+        <div class="npx-footer-logo"><span class="npx-logo-mark" aria-hidden="true" style="width:34px;height:34px;font-size:17px;">痒</span>挠脚心</div>
+        <p style="font-size:13px;line-height:1.9;">挠脚心官方网站，专注轻松治愈短片的原创视频社区。持续运营、深耕垂直领域，为创作者与企业搭建高品质内容生态。</p>
+        <p style="font-size:12.5px;margin-top:12px;color:#a58a6c;">官方发布 · 正版高清 · 用户至上</p>
+      </div>
+      <div>
+        <h4>浏览内容</h4>
+        <ul>
+          <li><a href="#npxFocus">焦点内容</a></li>
+          <li><a href="#npxStream">热门视频</a></li>
+          <li><a href="#npxTopic">专题企划</a></li>
+          <li><a href="#npxReview">社区口碑</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与共创</h4>
+        <ul>
+          <li><a href="#npxJoin">我要投稿</a></li>
+          <li><a href="#npxMaker">创作者矩阵</a></li>
+          <li><a href="#npxFaq">帮助中心</a></li>
+          <li><a href="#npxFaq">企业动态</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>联系我们</h4>
+        <ul>
+          <li>合作邮箱：hello@naojiaoxin.example</li>
+          <li>投稿咨询：creator@naojiaoxin.example</li>
+          <li>工作时间：周一至周五 10:00–19:00</li>
+          <li>办公地址：杭州市拱墅区影像创意园 3 号楼</li>
+        </ul>
+        <div style="margin-top:12px;">
+          <button class="npx-btn npx-btn-soft" style="padding:7px 16px;font-size:13px;" data-open="report">意见反馈</button>
+        </div>
+      </div>
+    </div>
+    <div class="npx-footer-bottom">
+      <span>© 2019–2026 挠脚心 版权所有 · 持续运营中</span>
+      <span>浙 ICP 备 2019000000 号 · 网络文化经营许可</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 弹窗：分享 -->
+<div class="npx-modal" id="npxModalShare" role="dialog" aria-modal="true" aria-label="分享">
+  <div class="npx-modal-box">
+    <button class="npx-modal-close" data-close aria-label="关闭">✕</button>
+    <h3>分享一条挠脚心短片</h3>
+    <p>把这份轻松转发给朋友，让更多人看到真实的生活记录。</p>
+    <div class="npx-share-list">
+      <button data-share-to="微信">微信</button>
+      <button data-share-to="微博">微博</button>
+      <button data-share-to="QQ">QQ</button>
+      <button data-copy>复制链接</button>
+    </div>
+  </div>
+</div>
+
+<!-- 弹窗：投稿 -->
+<div class="npx-modal" id="npxModalJoin" role="dialog" aria-modal="true" aria-label="投稿">
+  <div class="npx-modal-box">
+    <button class="npx-modal-close" data-close aria-label="关闭">✕</button>
+    <h3>投稿入口</h3>
+    <p>填写基本信息，我们会尽快与你联系。也可以直接在页面底部表单提交。</p>
+    <form class="npx-modal-form" onsubmit="return false;">
+      <input type="text" placeholder="你的昵称">
+      <input type="email" placeholder="联系邮箱">
+      <textarea placeholder="上传作品的简介或链接"></textarea>
+      <button class="npx-btn npx-btn-primary" type="button" style="width:100%;" data-submit-toast>提交</button>
+    </form>
+  </div>
+</div>
+
+<!-- 弹窗：反馈 -->
+<div class="npx-modal" id="npxModalReport" role="dialog" aria-modal="true" aria-label="意见反馈">
+  <div class="npx-modal-box">
+    <button class="npx-modal-close" data-close aria-label="关闭">✕</button>
+    <h3>意见反馈</h3>
+    <p>你的每一条建议都会被认真阅读，帮助我们把这个社区做得更好。</p>
+    <form class="npx-modal-form" onsubmit="return false;">
+      <input type="text" placeholder="反馈类型（内容/体验/版权等）">
+      <textarea placeholder="请描述你遇到的问题或建议"></textarea>
+      <button class="npx-btn npx-btn-primary" type="button" style="width:100%;" data-submit-toast>发送反馈</button>
+    </form>
+  </div>
+</div>
+
+<!-- 弹窗：作者信息 -->
+<div class="npx-modal" id="npxModalMaker" role="dialog" aria-modal="true" aria-label="创作者信息">
+  <div class="npx-modal-box">
+    <button class="npx-modal-close" data-close aria-label="关闭">✕</button>
+    <h3 id="npxMakerName">创作者</h3>
+    <p id="npxMakerField" style="color:var(--npx-amber-deep);font-weight:600;">方向</p>
+    <p id="npxMakerBio">简介</p>
+    <button class="npx-btn npx-btn-primary" type="button" data-submit-toast style="width:100%;">关注该创作者</button>
+  </div>
+</div>
+
+<div class="npx-toast" id="npxToast" role="status" aria-live="polite"></div>
+<button class="npx-top" id="npxTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* 公告轮播 */
+  var noticeItems = document.querySelectorAll(".npx-notice-item");
+  if (noticeItems.length > 1) {
+    var noticeIndex = 0;
+    setInterval(function(){
+      noticeItems[noticeIndex].classList.remove("is-on");
+      noticeIndex = (noticeIndex + 1) % noticeItems.length;
+      noticeItems[noticeIndex].classList.add("is-on");
+    }, 4800);
+  }
+
+  /* 移动端导航 */
+  var burger = document.getElementById("npxBurger");
+  var mobileNav = document.getElementById("npxMobileNav");
+  if (burger && mobileNav) {
+    burger.addEventListener("click", function(){
+      var open = mobileNav.classList.toggle("is-open");
+      burger.classList.toggle("is-open", open);
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    mobileNav.querySelectorAll("a").forEach(function(link){
+      link.addEventListener("click", function(){
+        mobileNav.classList.remove("is-open");
+        burger.classList.remove("is-open");
+        burger.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  /* Toast */
+  var toast = document.getElementById("npxToast");
+  var toastTimer = null;
+  function showToast(msg){
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add("is-on");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove("is-on"); }, 2200);
+  }
+
+  /* 搜索反馈 */
+  var searchInput = document.getElementById("npxSearchInput");
+  var searchBtn = document.getElementById("npxSearchBtn");
+  function runSearch(){
+    var q = searchInput ? searchInput.value.trim() : "";
+    if (!q) { showToast("请输入想搜索的短片或创作者"); return; }
+    var cards = document.querySelectorAll("#npxStreamGrid .npx-vcard");
+    var hit = 0;
+    cards.forEach(function(card){
+      var text = card.textContent || "";
+      var match = text.indexOf(q) > -1;
+      card.style.display = match ? "" : "none";
+      if (match) hit++;
+    });
+    if (hit > 0) {
+      showToast("找到 " + hit + " 条与「" + q + "」相关的短片");
+      document.getElementById("npxStream").scrollIntoView({behavior:"smooth"});
+    } else {
+      showToast("暂未找到「" + q + "」，试试「日常」或「手作」");
+      cards.forEach(function(card){ card.style.display = ""; });
+    }
+  }
+  if (searchBtn) searchBtn.addEventListener("click", runSearch);
+  if (searchInput) {
+    searchInput.addEventListener("keydown", function(e){
+      if (e.key === "Enter") { e.preventDefault(); runSearch(); }
+    });
+  }
+
+  /* 标签筛选 */
+  var filterBar = document.getElementById("npxFilterBar");
+  if (filterBar) {
+    filterBar.addEventListener("click", function(e){
+      var chip = e.target.closest(".npx-chip");
+      if (!chip) return;
+      filterBar.querySelectorAll(".npx-chip").forEach(function(c){ c.classList.remove("is-active"); });
+      chip.classList.add("is-active");
+      var cat = chip.getAttribute("data-filter");
+      document.querySelectorAll("#npxStreamGrid .npx-vcard").forEach(function(card){
+        var show = (cat === "all") || (card.getAttribute("data-cat") === cat);
+        card.style.display = show ? "" : "none";
+      });
+      showToast(cat === "all" ? "已显示全部短片" : "已筛选：" + cat);
+    });
+  }
+
+  /* 点赞 / 收藏 */
+  document.addEventListener("click", function(e){
+    var like = e.target.closest("[data-like]");
+    if (like) {
+      var numEl = like.querySelector("b");
+      var n = parseInt(numEl.textContent.replace(/,/g,""), 10) || 0;
+      var liked = like.classList.toggle("is-liked");
+      n = liked ? n + 1 : Math.max(0, n - 1);
+      numEl.textContent = n;
+      showToast(liked ? "已点赞，感谢支持" : "已取消点赞");
+      return;
+    }
+    var save = e.target.closest("[data-save]");
+    if (save) {
+      var saved = save.classList.toggle("is-saved");
+      save.innerHTML = saved ? "♥ 已收藏" : "☆";
+      if (!saved) save.innerHTML = "☆";
+      showToast(saved ? "已加入收藏夹" : "已取消收藏");
+      return;
+    }
+    var share = e.target.closest("[data-share]");
+    if (share) { openModal("npxModalShare"); return; }
+  });
+
+  /* 数字滚动 */
+  function animateCount(el){
+    var target = parseInt(el.getAttribute("data-count"), 10);
+    if (isNaN(target)) return;
+    var start = 0, dur = 1300, t0 = null;
+    function step(t){
+      if (!t0) t0 = t;
+      var p = Math.min((t - t0) / dur, 1);
+      var val = Math.floor(start + (target - start) * (1 - Math.pow(1 - p, 3)));
+      el.textContent = val.toLocaleString("zh-CN");
+      if (p < 1) requestAnimationFrame(step);
+      else el.textContent = target.toLocaleString("zh-CN");
+    }
+    requestAnimationFrame(step);
+  }
+  var counters = document.querySelectorAll("[data-count]");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) { animateCount(en.target); io.unobserve(en.target); }
+      });
+    }, {threshold:.5});
+    counters.forEach(function(c){ io.observe(c); });
+  } else {
+    counters.forEach(animateCount);
+  }
+
+  /* 弹窗 */
+  var modals = document.querySelectorAll(".npx-modal");
+  function openModal(id){
+    var m = document.getElementById(id);
+    if (m) m.classList.add("is-on");
+  }
+  function closeAll(){
+    modals.forEach(function(m){ m.classList.remove("is-on"); });
+  }
+  document.querySelectorAll("[data-open]").forEach(function(btn){
+    btn.addEventListener("click", function(e){
+      e.preventDefault();
+      var type = btn.getAttribute("data-open");
+      if (type === "share") openModal("npxModalShare");
+      else if (type === "join") openModal("npxModalJoin");
+      else if (type === "report") openModal("npxModalReport");
+    });
+  });
+  document.querySelectorAll("[data-close]").forEach(function(btn){
+    btn.addEventListener("click", closeAll);
+  });
+  modals.forEach(function(m){
+    m.addEventListener("click", function(e){ if (e.target === m) closeAll(); });
+  });
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeAll(); });
+
+  /* 弹窗内提交 */
+  document.querySelectorAll("[data-submit-toast]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      closeAll();
+      showToast("已提交，我们会尽快与你联系");
+    });
+  });
+
+  /* 分享项 */
+  document.addEventListener("click", function(e){
+    var to = e.target.closest("[data-share-to]");
+    if (to) { showToast("已唤起「" + to.getAttribute("data-share-to") + "」分享"); closeAll(); return; }
+    var copyBtn = e.target.closest("[data-copy]");
+    if (copyBtn) {
+      var link = "挠脚心官方网站 · 轻松治愈短片社区（分享链接已复制）";
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(link).then(function(){
+          showToast("分享信息已复制到剪贴板");
+        }).catch(function(){
+          showToast("复制失败，请手动分享");
+        });
+      } else {
+        showToast("分享信息已准备好，请手动复制");
+      }
+      closeAll();
+      return;
+    }
+  });
+
+  /* 创作者弹窗 */
+  var makerName = document.getElementById("npxMakerName");
+  var makerField = document.getElementById("npxMakerField");
+  var makerBio = document.getElementById("npxMakerBio");
+  document.querySelectorAll(".npx-maker").forEach(function(card){
+    card.addEventListener("click", function(){
+      if (makerName) makerName.textContent = card.getAttribute("data-maker") || "创作者";
+      if (makerField) makerField.textContent = card.getAttribute("data-field") || "";
+      if (makerBio) makerBio.textContent = card.getAttribute("data-bio") || "";
+      openModal("npxModalMaker");
+    });
+  });
+
+  /* 底部投稿表单 */
+  var joinSubmit = document.getElementById("npxJoinSubmit");
+  if (joinSubmit) {
+    joinSubmit.addEventListener("click", function(){
+      var name = document.getElementById("npxJoinName");
+      var mail = document.getElementById("npxJoinMail");
+      if (name && !name.value.trim()) { showToast("请填写昵称"); name.focus(); return; }
+      if (mail && mail.value.indexOf("@") < 0) { showToast("请填写有效的联系邮箱"); mail.focus(); return; }
+      showToast("投稿意向已记录，感谢你的参与");
+      if (name) name.value = "";
+      if (mail) mail.value = "";
+      var msg = document.getElementById("npxJoinMsg");
+      if (msg) msg.value = "";
+    });
+  }
+
+  /* 回到顶部 */
+  var topBtn = document.getElementById("npxTop");
+  window.addEventListener("scroll", function(){
+    if (!topBtn) return;
+    if (window.scrollY > 520) topBtn.classList.add("is-on");
+    else topBtn.classList.remove("is-on");
+  }, {passive:true});
+  if (topBtn) {
+    topBtn.addEventListener("click", function(){
+      window.scrollTo({top:0, behavior:"smooth"});
+    });
+  }
+
+})();
+</script>
+</body>
+            </html>
